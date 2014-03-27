@@ -22,7 +22,7 @@ It can be a file accessible via Ajax:
 
 Or in an element:
 
-    <script data-template-name="my-tmp">
+    <script id="my-tmp">
       <dialog title="Dialog Title">
         <p>Dialog content.</p>
       </dialog>
@@ -39,6 +39,26 @@ Which would render:
     <div data-template="my-tmp">
       <p>Hello, World!</p>
     </div>
+
+Options
+-------
+
+### `attribute`
+
+The attribute that contains the template which should be rendered.
+
+### `prefix`
+
+The prefix which is prepended to the `attribute` value when searching for a template to render. Defaults to `templates/`.
+
+### `suffix`
+
+The suffix that is appended to the `attribute` value when searching for a template to render. Defaults to `.html`.
+
+Optimisation
+------------
+
+In development, you don't have to do anything. Simply tell the node which template you want to render inside of it and it will fetch it via Ajax using the set conventions. If you want to compile your templates, you simply put their content into script tags and give them an id matching the `data-template` attribute referenced in the renderers.
 
 License
 -------
