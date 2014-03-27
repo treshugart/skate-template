@@ -3,6 +3,38 @@ skate-template
 
 A component that loads templates using Ajax or a DOM element into the bound element.
 
+Usage
+-----
+
+A template has two parts:
+
+1. The template.
+2. The elmement that renders the template.
+
+### The Template
+
+The template defines the markup in the template.
+
+It can be a file accessible via Ajax (templates/my-tmp.html):
+
+    <dialog title="Dialog Title">
+      <p>Dialog content.</p>
+    </dialog>
+
+Or in an element:
+
+    <script id="templates/my-tmp.html">
+      <dialog title="Dialog Title">
+        <p>Dialog content.</p>
+      </dialog>
+    </script>
+
+### The Renderer
+
+The renderer renders a defined template:
+
+    <div data-template="templates/my-tmp.html"></div>
+
 License
 -------
 
