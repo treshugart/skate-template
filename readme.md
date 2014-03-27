@@ -15,15 +15,14 @@ A template has two parts:
 
 The template defines the markup in the template.
 
-It can be a file accessible via Ajax (templates/my-tmp.html):
+It can be a file accessible via Ajax:
 
-    <dialog title="Dialog Title">
-      <p>Dialog content.</p>
-    </dialog>
+    <!-- templates/my-tmp.html -->
+    <p>Hello, World!</p>
 
 Or in an element:
 
-    <script id="templates/my-tmp.html">
+    <script data-template-name="my-tmp">
       <dialog title="Dialog Title">
         <p>Dialog content.</p>
       </dialog>
@@ -33,7 +32,13 @@ Or in an element:
 
 The renderer renders a defined template:
 
-    <div data-template="templates/my-tmp.html"></div>
+    <div data-template="my-tmp"></div>
+
+Which would render:
+
+    <div data-template="my-tmp">
+      <p>Hello, World!</p>
+    </div>
 
 License
 -------
